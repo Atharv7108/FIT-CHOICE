@@ -1,0 +1,2262 @@
+@keyframes push-in {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animated-item {
+    opacity: 0; /* Start hidden */
+    animation: push-in 0.5s forwards; /* Apply animation */
+    animation-delay: 0.2s; /* Delay for staggered effect */
+}
+
+.animated-item:nth-child(1) {
+    animation-delay: 0.2s; /* First item */
+}
+
+.animated-item:nth-child(2) {
+    animation-delay: 0.4s; /* Second item */
+}
+
+.animated-item:nth-child(3) {
+    animation-delay: 0.6s; /* Third item */
+}
+
+.animated-item:nth-child(4) {
+    animation-delay: 0.8s; /* Fourth item */
+}
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    /* Use Poppins font */
+    font-weight: 600;
+    text-align: left;
+    color:white;
+    size: 24px;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 64px;
+    color:white;
+}
+
+h4 {
+    font-size: 24px;
+    color:black;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color:black;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
+    width: 100%;
+}
+
+.navbar img {
+    width: 8rem;
+    /* 32px */
+    height: auto;
+    /* maintains the aspect ratio */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    background-color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+
+.option {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    height: 4rem;
+    border-radius: 2rem;
+    margin-right: 15rem;
+}
+
+.option ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.option li {
+    position: relative;
+    margin: 3rem;
+
+}
+
+.option li a {
+    text-decoration: none;
+    font-size: 1.375rem;
+    font-weight: 300;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.option li a:hover,
+.option li a.active {
+    color: #ffffff;
+}
+
+.option li a.active::after,
+.option li a:hover::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.signIn {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+
+.signIn a {
+    text-decoration: none;
+    font-size: 1.375rem;
+    font-weight: 300;
+    color: #000000;
+    transition: 0.3s ease;
+    position: relative;
+    /* Needed for the pseudo-element */
+}
+
+.signIn a:hover,
+.signIn a.active {
+    color: #ffffff;
+}
+
+.signIn a:hover::after,
+.signIn a.active::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.main {
+    display: flex;
+    /* Aligns children horizontally */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.left-part {
+    flex: 1;
+    /* Takes up available space */
+    padding: 2rem;
+    /* Adds padding around the content */
+    display: flex;
+    flex-direction: column;
+    /* Stacks text and boxes vertically */
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: center;
+    /* Centers content vertically */
+    background-color: #000000;
+    /* Optional: Light background color for the left part */
+}
+
+.text-banner {
+    text-align: center;
+    /* Center text inside text-banner */
+    margin-bottom: 2rem;
+    /* Space below the text */
+}
+
+.text-banner h1 {
+    font-size: 2.5rem;
+    /* Adjust the font size for the desired height */
+    color: yellow;
+    /* Sets the text color to yellow */
+    line-height: 1.2;
+    /* Adjust line height if needed */
+}
+
+.boxes-container {
+    display: flex;
+    /* Flex container for horizontal layout */
+    justify-content: space-between;
+    /* Space between boxes */
+    width: 100%;
+    /* Full width of the container */
+    max-width: 1200px;
+    /* Optional: Set max-width to fit your design */
+}
+
+.box {
+    background-color: gray;
+    /* Gray color for boxes */
+    width: 30%;
+    /* Adjust width as needed */
+    height: 200px;
+    /* Adjust height as needed */
+    display: flex;
+    /* Flex container for vertical alignment */
+    border-radius: 1rem;
+    flex-direction: column;
+    /* Stacks image and caption vertically */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    padding: 1rem;
+    /* Adds padding inside the box */
+    position: relative;
+    /* Allows positioning of child elements */
+}
+
+.box p {
+    color: yellow;
+}
+
+.box-img {
+    max-width: 80%;
+    /* Adjust to fit within the box */
+    max-height: 60%;
+    /* Adjust to fit within the box */
+    object-fit: cover;
+    /* Ensures image covers the space without distortion */
+    margin-bottom: 0.5rem;
+    /* Space between image and caption */
+}
+
+.box-caption {
+    color: #ffffff;
+    /* Caption text color */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    text-align: center;
+    /* Center caption text */
+}
+
+.right-part {
+    flex: 1;
+    /* Takes up available space */
+    display: flex;
+    /* Flex container for centering the image */
+    align-items: center;
+    /* Center the image vertically */
+    justify-content: center;
+    /* Center the image horizontally */
+    background-color: #000000;
+    /* Optional: Light background color for the right part */
+}
+
+.image-banner {
+    width: 100%;
+    /* Full width of the container */
+}
+
+.image-banner img {
+    height: 75vh;
+    /* Full viewport height */
+    width: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Adjusts how the image fits the container */
+    border-radius: 1rem;
+    margin-left: 14rem;
+}
+
+.our-programs {
+    display: flex;
+    /* Aligns children horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    justify-content: center;
+    /* Centers content horizontally */
+    min-height: 60vh;
+    /* Adjusted height for less vertical space */
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    /* Gradient background */
+    padding: 2rem;
+    /* Padding around the content */
+    text-align: center;
+    /* Centers text inside the container */
+}
+
+.information {
+    max-width: 1200px;
+    /* Increased maximum width for more text utilization */
+}
+
+.information h1 {
+    font-size: 3rem;
+    /* Increased font size for the heading */
+    font-family: 'Roboto', sans-serif;
+    /* Example font */
+    color: #333333;
+    /* Dark color for readability */
+    margin-bottom: 1.5rem;
+    /* Space below the heading */
+}
+
+.information p {
+    font-size: 1.25rem;
+    /* Increased font size for the paragraph text */
+    font-family: 'Arial', sans-serif;
+    /* Example font */
+    color: #555555;
+    /* Slightly lighter color for text */
+    line-height: 1.8;
+    /* Increased line height for readability */
+    margin: 0 auto;
+    /* Centers the paragraph text */
+    width: 100%;
+    /* Ensures the paragraph takes full width */
+    max-width: 1000px;
+    /* Increased maximum width to use more horizontal space */
+    text-align: center;
+    /* Centers the text inside the paragraph */
+}
+
+.program-information {
+    display: flex;
+    flex-direction: column;
+    /* Aligns items vertically */
+    align-items: center;
+    /* Centers items horizontally */
+    padding: 2rem;
+    /* Adds padding around the section */
+}
+
+.program {
+    display: flex;
+    /* Aligns image and description side by side */
+    align-items: center;
+    /* Centers items vertically within each program */
+    margin-bottom: 2rem;
+    /* Adds space between each program */
+    width: 100%;
+    /* Full width of the container */
+    max-width: 1200px;
+    /* Optional: Sets a maximum width for better layout control */
+}
+
+.image-container {
+    flex: 1;
+    /* Allows image container to take up available space */
+    padding: 1rem;
+    /* Adds space around the image */
+}
+
+.image-container img {
+    width: 100%;
+    /* Makes image responsive */
+    height: auto;
+    /* Maintains aspect ratio */
+    max-height: 300px;
+    /* Optional: Sets a maximum height for the image */
+    object-fit: cover;
+    /* Ensures the image covers the container */
+}
+
+.description {
+    flex: 1;
+    /* Allows description to take up available space */
+    padding: 1rem;
+    /* Adds space around the description */
+}
+
+.description h2 {
+    font-size: 2rem;
+    /* Font size for the heading */
+    margin-bottom: 0.5rem;
+    /* Space below the heading */
+}
+
+.description p {
+    font-size: 1rem;
+    /* Font size for the paragraph text */
+    line-height: 1.6;
+    /* Increases line height for readability */
+}
+
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.col {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sectionFooter {
+    background-color: #f0f0f0;
+}
+
+.col a {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.col a:hover {
+    text-decoration: underline;
+}
+
+.follow .icon {
+    display: flex;
+    gap: 10px;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.install .row img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+#payment img {
+    width: 50px;
+    margin: 10px 10px 0 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+    width: 100%;
+}
+
+/*Join Us Style*/
+.list-gym-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.list-gym-btn {
+    background-color: #E63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list-gym-btn:hover {
+    background-color: #c5303e;
+}
+
+/* Form styling */
+.form-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.gym-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 600px;
+}
+
+.gym-form h2 {
+    text-align: center;
+    color: #1F2933;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #1F2933;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #c5303e;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #1F2933;
+}
+
+.required {
+    color: #E63946;
+    font-weight: bold;
+}
+
+.faq-section {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.faq-header {
+    font-size: 24px;
+    text-align: center;
+    color: #1F2933;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.faq-item button {
+    background: none;
+    border: none;
+    color: #E63946;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.faq-item button:hover {
+    color: #96a543;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease-out;
+    color: #1F2933;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 10px 0;
+}
+
+.Details-for-gymOwners {
+    padding: 50px 20px;
+    background-color: #F1FAEE;
+    /* Soft background color to contrast the white boxes */
+}
+
+#comments-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#comments-container {
+    margin-bottom: 10px;
+}
+
+/*comment*/
+.comment {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+#name-input, #comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#post-comment-btn {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#post-comment-btn:hover {
+    background-color: #0056b3;
+}
+
+/*post*/
+#name-input, #email-input, #comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/*reply*/
+.reply-input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.reply-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reply-btn:hover {
+    background-color: #218838;
+}
+
+.reply-container {
+    margin-left: 20px; /* Indent replies */
+}
+/*directed*/
+.reply-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reply-btn:hover {
+    background-color: #218838;
+}
+/*cannot be edited*/
+.reply-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reply-btn:hover {
+    background-color: #218838;
+}
+textarea:disabled {
+    background-color: grey; /* Light gray background for disabled state */
+    cursor: not-allowed;
+    size:16px;/* Change cursor to indicate it's not editable */
+}
+body {
+    background-color: black; /* Set the background color of the entire page to black */
+    color: white; /* Set the default text color to white for readability */
+}
+
+#comments-section {
+    background-color: #222; /* Dark gray background for the comments section */
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above the comments section */
+}
+
+.comment {
+    background-color: #333; /* Slightly lighter background for individual comments */
+    padding: 10px; /* Padding inside each comment */
+    border-radius: 5px; /* Rounded corners for comments */
+    margin-bottom: 10px; /* Space between comments */
+}
+
+.reply-btn {
+    padding: 5px 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reply-btn:hover {
+    background-color: #218838;
+}
+
+textarea:disabled {
+    background-color: #555; /* Dark gray background for disabled textarea */
+    cursor: not-allowed; /* Change cursor to indicate it's not editable */
+}
+
+textarea {
+    background-color: #444; /* Dark background for the textarea */
+    color:white; /* White text color for the textarea */
+    border: 1px solid #ccc; /* Light border for the textarea */
+    border-radius: 5px;
+    size:16px; /* Rounded corners for he textarea */
+}
+
+/* Header Content Styles */
+.header-content {
+    display: flex; /* Use flexbox for horizontal alignment */
+    align-items: center; /* Center items vertically */
+    padding: 20px; /* Add padding around the header */
+}
+
+.post-image {
+    width: 40%; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.text-content {
+    flex: 1; /* Allow text content to take remaining space */
+}
+
+.text-content h1 {
+    margin: 10px 0; /* Space above and below the heading */
+}
+
+.read-more-btn {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Make it behave like a block */
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+.read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/*blog.css*/
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
+    width: 100%;
+}
+
+.navbar img {
+    width: 8rem;
+    /* 32px */
+    height: auto;
+    /* maintains the aspect ratio */
+}
+/*footer*/
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.col {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sectionFooter {
+    background-color: #f0f0f0;
+}
+
+.col a {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.col a:hover {
+    text-decoration: underline;
+}
+
+.follow .icon {
+    display: flex;
+    gap: 10px;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.install .row img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+#payment img {
+    width: 50px;
+    margin: 10px 10px 0 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+    width: 100%;
+}
+
+/*Join Us Style*/
+.list-gym-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.list-gym-btn {
+    background-color: #E63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list-gym-btn:hover {
+    background-color: #c5303e;
+}
+
+/* Form styling */
+.form-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.gym-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 600px;
+}
+
+.gym-form h2 {
+    text-align: center;
+    color: #1F2933;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #1F2933;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #c5303e;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #1F2933;
+}
+
+.required {
+    color: #E63946;
+    font-weight: bold;
+}
+
+.faq-section {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.faq-header {
+    font-size: 24px;
+    text-align: center;
+    color: #1F2933;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.faq-item button {
+    background: none;
+    border: none;
+    color: #E63946;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.faq-item button:hover {
+    color: #96a543;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease-out;
+    color: #1F2933;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 10px 0;
+}
+
+.Details-for-gymOwners {
+    padding: 50px 20px;
+    background-color: #F1FAEE;
+    /* Soft background color to contrast the white boxes */
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+.box-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.box-caption {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F2933;
+    /* Dark Navy Text Color */
+    margin-bottom: 10px;
+}
+
+.box-description {
+    font-size: 14px;
+    color: #6C757D;
+    /* Grayish color for description */
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    /* Increased font size */
+    font-weight: 700;
+    /* Bold font weight */
+    font-family: 'Arial', sans-serif;
+    /* You can change to a more elegant font */
+    color: #000;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    /* Add some padding for spacing */
+}
+
+
+.banner {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.divider {
+    height: 50px;
+    /* Adjust height as needed */
+    margin: 20px 0;
+    /* Space around the divider */
+}
+
+/*FindGym style*/
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #A8DADC;
+    border-radius: 25px;
+}
+
+.search-button {
+    background-color: #39e653;
+    border: none;
+    padding: 10px 20px;
+    color: #000000;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.gym-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 30px;
+    border: 1px solid #1F2933;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gym-photo img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.gym-info {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.gym-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1F2933;
+}
+
+.gym-info p {
+    font-size: 1.2rem;
+    color: #A8DADC;
+    margin-bottom: 15px;
+}
+
+.enquiry-btn {
+    background-color: #39e653;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/*repeat*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    /* Use Poppins font */
+    font-weight: 600;
+    text-align: left;
+    color:white;
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 46px;
+    line-height: 64px;
+    color: #222;
+}
+
+h4 {
+    font-size: 20px;
+    color: #222;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+button.normal {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+body {
+    width: 100%;
+}
+
+.navbar img {
+    width: 8rem;
+    /* 32px */
+    height: auto;
+    /* maintains the aspect ratio */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 40px;
+    background-color: #000000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+
+
+.option {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    height: 4rem;
+    border-radius: 2rem;
+    margin-right: 15rem;
+}
+
+.option ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.option li {
+    position: relative;
+    margin: 3rem;
+}
+
+.option li a {
+    text-decoration: none;
+    font-size: 1.375rem;
+    font-weight: 300;
+    color: #000000;
+    transition: 0.3s ease;
+}
+
+.option li a:hover,
+.option li a.active {
+    color: #ffffff;
+}
+
+.option li a.active::after,
+.option li a:hover::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.signIn {
+    display: flex;
+    align-items: center;
+    background-color: gray;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 1rem;
+    margin-right: 2rem;
+}
+
+.signIn a {
+    text-decoration: none;
+    font-size: 1.375rem;
+    font-weight: 300;
+    color: #000000;
+    transition: 0.3s ease;
+    position: relative;
+    /* Needed for the pseudo-element */
+}
+
+.signIn a:hover,
+.signIn a.active {
+    color: #ffffff;
+}
+
+.signIn a:hover::after,
+.signIn a.active::after {
+    content: "";
+    width: 20%;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+.main {
+    display: flex;
+    /* Aligns children horizontally */
+    height: 100vh;
+    /* Full viewport height */
+}
+
+.left-part {
+    flex: 1;
+    /* Takes up available space */
+    padding: 2rem;
+    /* Adds padding around the content */
+    display: flex;
+    flex-direction: column;
+    /* Stacks text and boxes vertically */
+    align-items: center;
+    /* Centers content horizontally */
+    justify-content: center;
+    /* Centers content vertically */
+    background-color: #000000;
+    /* Optional: Light background color for the left part */
+}
+
+.text-banner {
+    text-align: center;
+    /* Center text inside text-banner */
+    margin-bottom: 2rem;
+    /* Space below the text */
+}
+
+.text-banner h1 {
+    font-size: 2.5rem;
+    /* Adjust the font size for the desired height */
+    color: yellow;
+    /* Sets the text color to yellow */
+    line-height: 1.2;
+    /* Adjust line height if needed */
+}
+
+.boxes-container {
+    display: flex;
+    /* Flex container for horizontal layout */
+    justify-content: space-between;
+    /* Space between boxes */
+    width: 100%;
+    /* Full width of the container */
+    max-width: 1200px;
+    /* Optional: Set max-width to fit your design */
+}
+
+.box {
+    background-color: gray;
+    /* Gray color for boxes */
+    width: 30%;
+    /* Adjust width as needed */
+    height: 200px;
+    /* Adjust height as needed */
+    display: flex;
+    /* Flex container for vertical alignment */
+    border-radius: 1rem;
+    flex-direction: column;
+    /* Stacks image and caption vertically */
+    align-items: center;
+    /* Center content horizontally */
+    justify-content: center;
+    /* Center content vertically */
+    padding: 1rem;
+    /* Adds padding inside the box */
+    position: relative;
+    /* Allows positioning of child elements */
+}
+
+.box p {
+    color: yellow;
+}
+
+.box-img {
+    max-width: 80%;
+    /* Adjust to fit within the box */
+    max-height: 60%;
+    /* Adjust to fit within the box */
+    object-fit: cover;
+    /* Ensures image covers the space without distortion */
+    margin-bottom: 0.5rem;
+    /* Space between image and caption */
+}
+
+.box-caption {
+    color: #ffffff;
+    /* Caption text color */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    text-align: center;
+    /* Center caption text */
+}
+
+.right-part {
+    flex: 1;
+    /* Takes up available space */
+    display: flex;
+    /* Flex container for centering the image */
+    align-items: center;
+    /* Center the image vertically */
+    justify-content: center;
+    /* Center the image horizontally */
+    background-color: #000000;
+    /* Optional: Light background color for the right part */
+}
+
+.image-banner {
+    width: 100%;
+    /* Full width of the container */
+}
+
+.image-banner img {
+    height: 75vh;
+    /* Full viewport height */
+    width: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Adjusts how the image fits the container */
+    border-radius: 1rem;
+    margin-left: 14rem;
+}
+
+.our-programs {
+    display: flex;
+    /* Aligns children horizontally */
+    align-items: center;
+    /* Centers content vertically */
+    justify-content: center;
+    /* Centers content horizontally */
+    min-height: 60vh;
+    /* Adjusted height for less vertical space */
+    background: linear-gradient(to bottom right, #f8f9fa, #e9ecef);
+    /* Gradient background */
+    padding: 2rem;
+    /* Padding around the content */
+    text-align: center;
+    /* Centers text inside the container */
+}
+
+.information {
+    max-width: 1200px;
+    /* Increased maximum width for more text utilization */
+}
+
+.information h1 {
+    font-size: 3rem;
+    /* Increased font size for the heading */
+    font-family: 'Roboto', sans-serif;
+    /* Example font */
+    color: #333333;
+    /* Dark color for readability */
+    margin-bottom: 1.5rem;
+    /* Space below the heading */
+}
+
+.information p {
+    font-size: 1.25rem;
+    /* Increased font size for the paragraph text */
+    font-family: 'Arial', sans-serif;
+    /* Example font */
+    color: #555555;
+    /* Slightly lighter color for text */
+    line-height: 1.8;
+    /* Increased line height for readability */
+    margin: 0 auto;
+    /* Centers the paragraph text */
+    width: 100%;
+    /* Ensures the paragraph takes full width */
+    max-width: 1000px;
+    /* Increased maximum width to use more horizontal space */
+    text-align: center;
+    /* Centers the text inside the paragraph */
+}
+
+.program-information {
+    display: flex;
+    flex-direction: column;
+    /* Aligns items vertically */
+    align-items: center;
+    /* Centers items horizontally */
+    padding: 2rem;
+    /* Adds padding around the section */
+}
+
+.program {
+    display: flex;
+    /* Aligns image and description side by side */
+    align-items: center;
+    /* Centers items vertically within each program */
+    margin-bottom: 2rem;
+    /* Adds space between each program */
+    width: 100%;
+    /* Full width of the container */
+    max-width: 1200px;
+    /* Optional: Sets a maximum width for better layout control */
+}
+
+.image-container {
+    flex: 1;
+    /* Allows image container to take up available space */
+    padding: 1rem;
+    /* Adds space around the image */
+}
+
+.image-container img {
+    width: 100%;
+    /* Makes image responsive */
+    height: auto;
+    /* Maintains aspect ratio */
+    max-height: 300px;
+    /* Optional: Sets a maximum height for the image */
+    object-fit: cover;
+    /* Ensures the image covers the container */
+}
+
+.description {
+    flex: 1;
+    /* Allows description to take up available space */
+    padding: 1rem;
+    /* Adds space around the description */
+}
+
+.description h2 {
+    font-size: 2rem;
+    /* Font size for the heading */
+    margin-bottom: 0.5rem;
+    /* Space below the heading */
+}
+
+.description p {
+    font-size: 1rem;
+    /* Font size for the paragraph text */
+    line-height: 1.6;
+    /* Increases line height for readability */
+}
+
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.col {
+    flex: 1;
+    margin: 20px;
+    min-width: 200px;
+}
+
+h4 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.sectionFooter {
+    background-color: #f0f0f0;
+}
+
+.col a {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+.col a:hover {
+    text-decoration: underline;
+}
+
+.follow .icon {
+    display: flex;
+    gap: 10px;
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.install .row img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+#payment img {
+    width: 50px;
+    margin: 10px 10px 0 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
+    width: 100%;
+}
+
+/*Join Us Style*/
+.list-gym-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.list-gym-btn {
+    background-color: #E63946;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.list-gym-btn:hover {
+    background-color: #c5303e;
+}
+
+/* Form styling */
+.form-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.gym-form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%;
+    max-width: 600px;
+}
+
+.gym-form h2 {
+    text-align: center;
+    color: #1F2933;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #1F2933;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: #E63946;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #c5303e;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #1F2933;
+}
+
+.required {
+    color: #E63946;
+    font-weight: bold;
+}
+
+.faq-section {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+}
+
+.faq-header {
+    font-size: 24px;
+    text-align: center;
+    color: #1F2933;
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+
+.faq-item button {
+    background: none;
+    border: none;
+    color: #E63946;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.faq-item button:hover {
+    color: #96a543;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: max-height 0.3s ease-out;
+    color: #1F2933;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+}
+
+.faq-item.active .faq-answer {
+    padding: 10px 0;
+}
+
+.Details-for-gymOwners {
+    padding: 50px 20px;
+    background-color: #F1FAEE;
+    /* Soft background color to contrast the white boxes */
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.info-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    /* Lift effect on hover */
+}
+
+.box-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.box-caption {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F2933;
+    /* Dark Navy Text Color */
+    margin-bottom: 10px;
+}
+
+.box-description {
+    font-size: 14px;
+    color: #6C757D;
+    /* Grayish color for description */
+    line-height: 1.6;
+}
+
+h2 {
+    text-align: center;
+    font-size: 28px;
+    /* Increased font size */
+    font-weight: 700;
+    /* Bold font weight */
+    font-family: 'Arial', sans-serif;
+    /* You can change to a more elegant font */
+    color: #000;
+    background-color: #f0f0f0;
+    padding: 10px 0;
+    /* Add some padding for spacing */
+}
+
+
+.banner {
+    background-color: #f0f0f0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.box {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+}
+
+.box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.box p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000000;
+}
+
+.divider {
+    height: 50px;
+    /* Adjust height as needed */
+    margin: 20px 0;
+    /* Space around the divider */
+}
+
+/*FindGym style*/
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.search-bar {
+    width: 400px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: 2px solid #A8DADC;
+    border-radius: 25px;
+}
+
+.search-button {
+    background-color: #39e653;
+    border: none;
+    padding: 10px 20px;
+    color: #000000;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.gym-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-bottom: 30px;
+    border: 1px solid #1F2933;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gym-photo img {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.gym-info {
+    margin-left: 20px;
+    flex: 1;
+}
+
+.gym-info h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #1F2933;
+}
+
+.gym-info p {
+    font-size: 1.2rem;
+    color: #A8DADC;
+    margin-bottom: 15px;
+}
+
+.enquiry-btn {
+    background-color: #39e653;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*presentable*/
+/*presentable*/
+/* Styling for <header> and <main> sections */
+main header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main header h1 {
+    color: #1E90FF;
+    font-size: 2em;
+    margin-top: 0;
+}
+
+main header img.post-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+main ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+main li {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+main h1 {
+    font-size: 1.8em;
+    margin-top: 40px;
+    color: #1E90FF;
+}
+
+/* Add hover and animation effects for items in <main> */
+main li.animated-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+main li.animated-item:hover {
+    background-color: #e0f7fa;
+    transition: background-color 0.3s ease-in;
+}
+
+main li.animated-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+main a.btn-back {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+main a.btn-back:hover {
+    background-color: #007acc;
+}
+/*posted comments*/
+/* Styling the comments section */
+#comments-section {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#comments-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#comment-form input, #comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    outline: none;
+}
+
+#comment-form input:focus, #comment-form textarea:focus {
+    border-color: #007acc;
+}
+
+#post-comment-btn {
+    padding: 10px 20px;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+#post-comment-btn:hover {
+    background-color: #005f99;
+}
+
+#comments-container {
+    margin-bottom: 30px;
+}
+
+.comment {
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.comment .comment-author {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.comment .comment-body {
+    font-size: 1em;
+    color: #555;
+}
+/*presentable1*/
+body {
+    font-family: Arial, sans-serif; /* Change to your preferred font */
+    background-color: black;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.comments-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.comment-box {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #333;
+}
+
+.comment-box p {
+    margin: 5px 0;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}

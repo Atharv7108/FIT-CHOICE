@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitChoice - Select Membership Days</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="navbar">
+            <a href="home.html"><img src="images/logo.jpg" alt=""></a>
+        </div>
+        <div class="option">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="findGym.html">Find Gym</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="joinUs.html">Join Us</a></li>
+                <li><a  href="aboutUs.html">About US</a></li>
+            </ul>
+        </div>
+        <div class="signIn">
+            <a href="signin.html">SignIn</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Left side: Image of the gym with description -->
+        <div class="image-section">
+            <img src="images/backImage.jpg" alt="Gym Image">
+
+            <!-- Gym Name, Rating, Location, and Timing -->
+            <div class="gym-info">
+                <h1>Iron Fitness Center</h1>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- Example star rating -->
+                    <p>4.5/5 Rating</p>
+                </div>
+                <p class="location">Location:Seawoods ,secter 27,navi mumbai 400064 </p>
+                <p class="timing">Opening Hours: 6:00 AM - 10:00 PM</p>
+            </div>
+
+            <!-- About Us and Amenities -->
+            <div class="gym-description">
+                <h2>About Us</h2>
+                <p>Welcome to Iron fitness, where We, are your dedicated fitness companion on a transformative journey. Here, the resonance of weights mirrors progress, and the camaraderie among our members forms a supportive community. In this empowering space, every drop of sweat signifies your commitment to forging a stronger, fitter version of yourself.
+
+                </p>
+
+                <h2>Amenities</h2>
+                <div class="amenities-grid">
+                    <div class="amenity-box">
+                        <img src="images/aminities1.png" alt="Icon 1">
+                        <p>Modern Equipment</p>
+                    </div>
+                    <div class="amenity-box">
+                        <img src="images/aminities2.png" alt="Icon 2">
+                        <p>Personal Trainers</p>
+                    </div>
+                    <div class="amenity-box">
+                        <img src="images/aminities3.png" alt="Icon 3">
+                        <p>Group Classes</p>
+                    </div>
+                    <div class="amenity-box">
+                        <img src="images/aminities4.png" alt="Icon 4">
+                        <p>Shower Facilities</p>
+                    </div>
+                    <div class="amenity-box">
+                        <img src="images/aminities5.png" alt="Icon 5">
+                        <p>Parking Space</p>
+                    </div>
+                    <div class="amenity-box">
+                        <img src="images/aminities6.png" alt="Icon 6">
+                        <p>Free WiFi</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right side: Calendar selection for membership days and reviews -->
+        <div class="calendar-section">
+            <h2>Select Membership Days</h2>
+            <form>
+                <div class="calendar-group">
+                    <label for="membership-schedule">Choose Your Dates:</label>
+                    <input type="text" id="membership-schedule" name="membership-schedule"
+                        placeholder="Select multiple days" required>
+                </div>
+                <input type="submit" value="Submit">
+            </form>
+
+            <!-- Reviews Section -->
+            <div class="reviews-section">
+                <h2>Customer Reviews</h2>
+                <div class="review">
+                    <p><strong>John Doe</strong>: "Great gym! The trainers are very helpful."
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </p>
+                </div>
+                <div class="review">
+                    <p><strong>Jane Smith</strong>: "I love the group classes. Always a great workout!"
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    </p>
+                </div>
+                <div class="review">
+                    <p><strong>Emily Johnson</strong>: "The equipment is top-notch and well-maintained."
+                        <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Safety and Hygiene Rules Section -->
+            <div class="safety-rules-section">
+                <h2>Safety & Hygiene Rules</h2>
+                <ul>
+                    <li>Wear a mask when not exercising.</li>
+                    <li>Sanitize your hands before and after workouts.</li>
+                    <li>Maintain a distance of at least 6 feet from others.</li>
+                    <li>Clean equipment after use with provided sanitizers.</li>
+                    <li>Stay home if you feel unwell or show any symptoms.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flatpickr JS for multiple date selection -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initializing flatpickr with multiple date selection
+        flatpickr("#membership-schedule", {
+            mode: "multiple", // Allows multiple date selection
+            dateFormat: "Y-m-d", // Date format
+            minDate: "today", // Prevent selecting past dates
+        });
+    </script>
+    <footer class="sectionFooter">
+        <div class="logo-container">
+            <img src="images/logo2.png" class="logo" alt="Gym Logo">
+        </div>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 1234 Elm Street, Suite 567, Springfield, IL 62701, USA</p>
+                <p><strong>Phone:</strong> 91+ 8292005066</p>
+                <p><strong>Hours:</strong> 10:00 to 18.00, Mon-Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <a href=""><img src="images/facebook-app-symbol.png" alt="facebook"></a>
+                        <a href=""><img src="images/instagram.png" alt="instagram"></a>
+                        <a href=""><img src="images/twitter.png" alt="twitter"></a>
+                        <a href=""><img src="images/youtube.png" alt="youtube"></a>
+                        <a href=""><img src="images/pinterest.png" alt="pinterest"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Membership Plans</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">My Profile</a>
+                <a href="#">Workout Plans</a>
+                <a href="#">Track My Progress</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play Store</p>
+                <div class="row">
+                    <img src="images/apple.png" alt="App Store">
+                    <img src="images/google.png" alt="Google Play">
+                </div>
+                <div id="payment">
+                    <p>Secured Payment Gateways</p>
+                    <img src="images/visa.png" alt="Visa">
+                    <img src="images/mastercard.png" alt="MasterCard">
+                    <img src="images/rupay.png" alt="RuPay">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2024, Fit Choice-HTML CSS Project</p>
+        </div>
+    </footer>
+</body>
+
+</html>

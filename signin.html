@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="signin.css">
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>FitChoice.com/SignIn</title>
+</head>
+ <html>    
+   <body>
+       <section id="header">
+            <div class="navbar">
+                <a href="home.html"><img src="images/logo.jpg" alt=""></a>
+            </div>
+            <!-- <div class="option">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="findGym.html">Find Gym</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="joinUs.html">Join Us</a></li>
+                    <li><a   href="aboutUs.html">About US</a></li>
+                </ul>
+            </div> -->
+           
+        </section>
+
+        
+
+       
+        <div class="container" id="container">
+            <!-- Sign Up Form -->
+            <div class="form-container sign-up">
+                <form action="register.php" method="POST">
+                    <h1>Create Account</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <span>Register with E-mail</span>
+                    <input type="text" name="username" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        
+            <!-- Sign In Form -->
+            <div class="form-container sign-in">
+                <form action="login.php" method="POST">
+                    <h1>Sign In</h1>
+                    <div class="social-icons">
+                        <a href="#" class="icons"><i class='bx bxl-google'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-facebook'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-github'></i></a>
+                        <a href="#" class="icons"><i class='bx bxl-linkedin'></i></a>
+                    </div>
+                    <span>Login With Email & Password</span>
+                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                    <input type="password" name="password" placeholder="Enter Password" required>
+                    <a href="#">Forget Password?</a>
+                    <button type="submit">Sign In</button>
+                </form>
+                
+            </div>
+        
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome To <br>FIT CHOICE</h1>
+                        <p>Sign in With ID & Password</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hi Members</h1>
+                        <p>Join "FIT CHOICE" to Improve Your Personality</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Section -->
+        <footer>
+            <div class="footer-container">
+                <section>
+                    <h2>Stay Connected</h2>
+                    <p>Follow us on social media for updates</p>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                    </div>
+                </section>
+            </div>
+            <p>&copy; 2024 FitChoice.com. All Rights Reserved.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+
+    </html>

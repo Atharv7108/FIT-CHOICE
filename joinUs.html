@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitChoice.com</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="navbar">
+            <a href="home.html"><img src="images/logo.jpg" alt=""></a>
+        </div>
+        <div class="option">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="findGym.html">Find Gym</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a class="active" href="joinUs.html">Join Us</a></li>
+                <li><a  href="aboutUs.html">About US</a></li>
+            </ul>
+        </div>
+        <div class="signIn">
+            <a href="signin.html">SignIn</a>
+        </div>
+    </section>
+    <!-- Form for listing the gym -->
+
+    <section class="form-section">
+        <form class="gym-form" id="gymForm">
+            <h2>List Your Gym</h2>
+            <div class="form-group">
+                <label for="firstName">First Name: <span class="required">*</span></label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name: <span class="required">*</span></label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Username: <span class="required">*</span></label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number: <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="aadhar">Aadhar Card Number: <span class="required">*</span></label>
+                <input type="text" id="aadhar" name="aadhar" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Gmail: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="gymName">Gym Name: <span class="required">*</span></label>
+                <input type="text" id="gymName" name="gymName" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address: <span class="required">*</span></label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Enquery</button>
+        </form>
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <button class="faq-question">How do I register my gym?<span class="arrow">&#x25BC;</span></button>
+                    <div class="faq-answer">
+                        <p>Click on the 'List Your Gym' button above and fill in the required details. Once submitted, our team will review your application.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What documents are required?<span class="arrow">&#x25BC;</span></button>
+                    <div class="faq-answer">
+                        <p>You will need to provide your gym's registration certificate, business details, and an identity proof like Aadhar or PAN card.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How long does it take to list my gym?<span class="arrow">&#x25BC;</span></button>
+                    <div class="faq-answer">
+                        <p>Once submitted, it takes around 3-5 business days for our team to review and list your gym on FitChoice.com.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    
+    <script>
+        // JavaScript for FAQ accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+    
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+                const answer = question.nextElementSibling;
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    question.querySelector('.arrow').innerHTML = "&#x25BC;";
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    question.querySelector('.arrow').innerHTML = "&#x25B2;";
+                }
+            });
+        });
+    
+        // JavaScript for form submission message
+        document.getElementById('gymForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+            alert("Your enquiry has been submitted. You will receive a call in 2-3 working days.");
+            // Optionally, you could reset the form after submission
+            this.reset();
+        });
+    </script>
+    
+
+
+    </section>
+
+    <section class="Details-for-gymOwners">
+        <div class="box-container">
+            <!-- Box 1 -->
+            <div class="info-box">
+                <img src="images/joinUs1.png" alt="Image 1" class="box-image">
+                <h3 class="box-caption">Support throughout the lifecycle of your Gym</h3>
+                <p class="box-description">Through a proven operations and marketing model, we walk with you throughout
+                    your journey.</p>
+            </div>
+            <!-- Box 2 -->
+            <div class="info-box">
+                <img src="images/joinUs2.png" alt="Image 2" class="box-image">
+                <h3 class="box-caption">Fixed Royalty Fee</h3>
+                <p class="box-description">We have a fixed monthly fee and do not take out a percentage of your profits
+                    for your business to grow substantially.</p>
+            </div>
+            <!-- Box 3 -->
+            <div class="info-box">
+                <img src="images/joinUs3.png" alt="Image 3" class="box-image">
+                <h3 class="box-caption">The best culture around for you and your members</h3>
+                <p class="box-description">Our culture is defined by People, Purpose, Profits, Play. We look for hard
+                    working people with a purpose, who yearn for financial success and find the fun in everything they
+                    do.</p>
+            </div>
+            <!-- Box 4 -->
+            <div class="info-box">
+                <img src="images/joinUs4.png" alt="Image 4" class="box-image">
+                <h3 class="box-caption">A new member every minute</h3>
+                <p class="box-description">At Anytime Fitness, we have a new member join one of our clubs every minute
+                    of every day.</p>
+            </div>
+            <!-- Box 5 -->
+            <div class="info-box">
+                <img src="images/joinUs5.png" alt="Image 5" class="box-image">
+                <h3 class="box-caption">Our franchisee’s success continues to grow</h3>
+                <p class="box-description">60% of our existing franchisees in India own more than one club because
+                    they’ve experienced the success of our business model.</p>
+            </div>
+            <!-- Box 6 -->
+            <div class="info-box">
+                <img src="images/joinUs6.png" alt="Image 6" class="box-image">
+                <h3 class="box-caption">Largest presence of any fitness franchise</h3>
+                <p class="box-description">Anytime Fitness is the first franchise on all 7 continents, with over 5000
+                    gyms and 5 million+ members worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="uses-owners">
+        <h2>How is FIT CHOICE Benefitting Fitness Enthusiasts</h2> <!-- Add heading here -->
+        <div class="banner">
+            <div class="box">
+                <img src="images/joinUs7.png" alt="Personalized Coaching">
+                <p>Personalized Coaching</p>
+            </div>
+            <div class="box">
+                <img src="images/joinUs8.png" alt="Workout Anytime, Anywhere">
+                <p>Workout Anytime, Anywhere</p>
+            </div>
+            <div class="box">
+                <img src="images/joinUs9.png" alt="Global Access">
+                <p>One Membership = Global Access</p>
+            </div>
+        </div>
+    </section>
+    <div class="divider"></div>
+    <footer class="sectionFooter">
+        <div class="logo-container">
+            <img src="images/logo2.png" class="logo" alt="Gym Logo">
+        </div>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 1234 Elm Street, Suite 567, Springfield, IL 62701, USA</p>
+                <p><strong>Phone:</strong> 91+ 8292005066</p>
+                <p><strong>Hours:</strong> 10:00 to 18.00, Mon-Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <a href=""><img src="images/facebook-app-symbol.png" alt="facebook"></a>
+                        <a href=""><img src="images/instagram.png" alt="instagram"></a>
+                        <a href=""><img src="images/twitter.png" alt="twitter"></a>
+                        <a href=""><img src="images/youtube.png" alt="youtube"></a>
+                        <a href=""><img src="images/pinterest.png" alt="pinterest"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Membership Plans</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">My Profile</a>
+                <a href="#">Workout Plans</a>
+                <a href="#">Track My Progress</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play Store</p>
+                <div class="row">
+                    <img src="images/apple.png" alt="App Store">
+                    <img src="images/google.png" alt="Google Play">
+                </div>
+                <div id="payment">
+                    <p>Secured Payment Gateways</p>
+                    <img src="images/visa.png" alt="Visa">
+                    <img src="images/mastercard.png" alt="MasterCard">
+                    <img src="images/rupay.png" alt="RuPay">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2024, Fit Choice-HTML CSS Project</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

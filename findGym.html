@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitChoice.com</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="navbar">
+            <a href="home.html"><img src="images/logo.jpg" alt=""></a>
+        </div>
+        <div class="option">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a class="active" href="findGym.html">Find Gym</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="joinUs.html">Join Us</a></li>
+                <li><a  href="aboutUs.html">About US</a></li>
+            </ul>
+        </div>
+        <div class="signIn">
+            <a href="signin.html">SignIn</a>
+        </div>
+    </section>
+
+    <section class="section-p1">
+        <div class="search-container">
+            <input type="text" placeholder="Search for a gym..." class="search-bar" id="gymSearchBar"
+                onkeyup="searchGym()">
+            <button class="search-button">
+                <i class="fas fa-search">Search</i>
+            </button>
+        </div>
+
+        <div id="gymsList">
+            <div class="gym-container" data-gym-name="Iron Fitness Center">
+                <div class="gym-photo">
+                    <img src="images/gymImage1.png" alt="Gym Photo">
+                </div>
+                <div class="gym-info">
+                    <h2>Iron Fitness Center</h2>
+                    <p>Address: Seawoods ,secter 27,navi mumbai</p>
+                    <a href="enquiry.html" class="enquiry-btn">Enquire</a>
+                </div>
+            </div>
+
+            <div class="gym-container" data-gym-name="Platinum fitness">
+                <div class="gym-photo">
+                    <img src="images/gymImage4.jpg" alt="Gym Photo">
+                </div>
+                <div class="gym-info">
+                    <h2>Platinum fitness</h2>
+                    <p>Address:Siddhart nagar,Borivali east </p>
+                    <a href="enquiry2.html" class="enquiry2-btn">Enquire</a>
+                </div>
+            </div>
+
+            <div class="gym-container" data-gym-name="Beast Mode Gym">
+                <div class="gym-photo">
+                    <img src="images/gymImage2.png" alt="Gym Photo">
+                </div>
+                <div class="gym-info">
+                    <h2>Beast Mode Gym</h2>
+                    <p>Address: Seven bunglow,Varsova,Andheri west</p>
+                    <a href="enquiry.html" class="enquiry-btn">Enquire</a>
+                </div>
+            </div>
+
+            <div class="gym-container" data-gym-name="Qicfit Gymnasium">
+                <div class="gym-photo">
+                    <img src="images/gymImage3.png" alt="Gym Photo">
+                </div>
+                <div class="gym-info">
+                    <h2>Qicfit Gymnasium</h2>
+                    <p>Address: Thakur village,kandivali east </p>
+                    <a href="enquiry.html" class="enquiry-btn">Enquire</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <footer class="sectionFooter">
+        <div class="logo-container">
+            <img src="images/logo2.png" class="logo" alt="Gym Logo">
+        </div>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 1234 Elm Street, Suite 567, Springfield, IL 62701, USA</p>
+                <p><strong>Phone:</strong> 91+ 8292005066</p>
+                <p><strong>Hours:</strong> 10:00 to 18.00, Mon-Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <a href=""><img src="images/facebook-app-symbol.png" alt="facebook"></a>
+                        <a href=""><img src="images/instagram.png" alt="instagram"></a>
+                        <a href=""><img src="images/twitter.png" alt="twitter"></a>
+                        <a href=""><img src="images/youtube.png" alt="youtube"></a>
+                        <a href=""><img src="images/pinterest.png" alt="pinterest"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Membership Plans</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">My Profile</a>
+                <a href="#">Workout Plans</a>
+                <a href="#">Track My Progress</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play Store</p>
+                <div class="row">
+                    <img src="images/apple.png" alt="App Store">
+                    <img src="images/google.png" alt="Google Play">
+                </div>
+                <div id="payment">
+                    <p>Secured Payment Gateways</p>
+                    <img src="images/visa.png" alt="Visa">
+                    <img src="images/mastercard.png" alt="MasterCard">
+                    <img src="images/rupay.png" alt="RuPay">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2024, Fit Choice-HTML CSS Project</p>
+        </div>
+    </footer>
+</body>
+
+
+</html>

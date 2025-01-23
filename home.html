@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitChoice.com</title>
+    <link rel="icon" href="images/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="navbar">
+            <a href="home.html"><img src="images/logo.jpg" alt=""></a>
+        </div>
+        <div class="option">
+            <ul>
+                <li><a class="active" href="home.html">Home</a></li>
+                <li><a href="findGym.html">Find Gym</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="joinUs.html">Join Us</a></li>
+                <li><a href="aboutUs.html">About US</a></li>
+            </ul>
+        </div>
+        <div class="signIn">
+            <a href="signin.html">SignIn</a>
+        </div>
+    </section>
+    <section id="banner">
+        <div class="banner-container">
+            <div class="slide fade">
+                <img src="images/imageBanner1.png" alt="Slide 1">
+                <div class="quote">“The only bad workout is the one that didn’t happen.”</div>
+            </div>
+            <div class="slide fade">
+                <img src="images/imageBanner2.jpg" alt="Slide 2">
+                <div class="quote">“Fitness is not about being better than someone else. It’s about being better than
+                    you used to be.”</div>
+            </div>
+            <div class="slide fade">
+                <img src="images/imageBanner3.jpeg" alt="Slide 3">
+                <div class="quote">“Don’t limit your challenges. Challenge your limits.”</div>
+            </div>
+            <div class="slide fade">
+                <img src="images/imageBanner4.jpeg" alt="Slide 4">
+                <div class="quote">“Success is usually the culmination of controlling failure.”</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 3 seconds
+        }
+    </script>
+
+
+    <section class="our-programs section-p1">
+        <div class="information">
+            <h1 style="text-align: center;">Our Programs</h1>
+            <p>The diverse range of programs, from group exercises, corporate training to personalized training, caters
+                to varying fitness levels and goals. Members get variety and the option of customization as each gym
+                offers a diversity of exercise options and specialized programs, allowing members to choose activities
+                that align with their interests and fitness objectives. Personalized training programs ensure workouts
+                are tailored to individual needs, maximizing results. Participating in group exercises fosters a sense
+                of community among members, providing social support and encouragement, which can be instrumental in
+                maintaining consistency in their fitness journey.</p>
+        </div>
+    </section>
+    <section class="section-p1">
+        <div class="program-information">
+            <div class="program">
+                <div class="image-container">
+                    <img src="images/pgInfo1.png" alt="Program 1">
+                </div>
+                <div class="description">
+                    <h2>Personal Training</h2>
+                    <p>FIT CHOICE India is known for the competent personal trainers and extraordinary personal training
+                        offered by them. The individuals seeking for serious goal-oriented fitness, personalized
+                        guidance, motivation, and specialized workout plans, FIT CHOICE India personal training program
+                        is for them.</p>
+                </div>
+            </div>
+            <div class="program">
+                <div class="image-container">
+                    <img src="images/pgInfo2.png" alt="Program 2">
+                </div>
+                <div class="description">
+                    <h2>Corporate Membership</h2>
+                    <p>Don’t have time to go to the gym? We get the gym to you. FIT CHOICE India offers corporate
+                        membership programs tailored for companies looking to promote employee wellness and fitness.
+                        These programs are designed to encourage a healthier workforce by providing BMI screening, diet
+                        and nutrition counselling, fitness activities and seminars for building a healthier lifestyle.
+                    </p>
+                </div>
+            </div>
+            <div class="program">
+                <div class="image-container">
+                    <img src="images/pgInfo3.png" alt="Program 3">
+                </div>
+                <div class="description">
+                    <h2>Group Program</h2>
+                    <p>FIT CHOICE India provides a variety of group fitness programs such as dance fitness, yoga, HIIT,
+                        and much more tailored to cater to diverse fitness preferences and goals. These group programs
+                        offer a supportive environment and a sense of community while engaging participants in fun and
+                        effective workouts..</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer class="sectionFooter section-p1">
+        <div class="logo-container">
+            <img src="images/logo2.png" class="logo" alt="Gym Logo">
+        </div>
+        <div class="footer-columns">
+            <div class="col">
+                <h4>Contact</h4>
+                <p><strong>Address:</strong> 1234 Elm Street, Suite 567, Springfield, IL 62701, USA</p>
+                <p><strong>Phone:</strong> 91+ 8292005066</p>
+                <p><strong>Hours:</strong> 10:00 to 18.00, Mon-Sat</p>
+                <div class="follow">
+                    <h4>Follow Us</h4>
+                    <div class="icon">
+                        <a href=""><img src="images/facebook-app-symbol.png" alt="facebook"></a>
+                        <a href=""><img src="images/instagram.png" alt="instagram"></a>
+                        <a href=""><img src="images/twitter.png" alt="twitter"></a>
+                        <a href=""><img src="images/youtube.png" alt="youtube"></a>
+                        <a href=""><img src="images/pinterest.png" alt="pinterest"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <h4>About</h4>
+                <a href="#">About Us</a>
+                <a href="#">Membership Plans</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="col">
+                <h4>My Account</h4>
+                <a href="#">Sign In</a>
+                <a href="#">My Profile</a>
+                <a href="#">Workout Plans</a>
+                <a href="#">Track My Progress</a>
+                <a href="#">Support</a>
+            </div>
+            <div class="col install">
+                <h4>Install App</h4>
+                <p>From App Store or Google Play Store</p>
+                <div class="row">
+                    <img src="images/apple.png" alt="App Store">
+                    <img src="images/google.png" alt="Google Play">
+                </div>
+                <div id="payment">
+                    <p>Secured Payment Gateways</p>
+                    <img src="images/visa.png" alt="Visa">
+                    <img src="images/mastercard.png" alt="MasterCard">
+                    <img src="images/rupay.png" alt="RuPay">
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>©2024, Fit Choice-HTML CSS Project</p>
+        </div>
+    </footer>
+</body>
+
+</html>
